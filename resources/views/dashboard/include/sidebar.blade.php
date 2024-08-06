@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="/mydashboard">
+        <a class="nav-link" href="{{url('/mydashboard')}}">
           <i class="mdi mdi-grid-large menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
@@ -29,7 +29,7 @@
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="/form">Form</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url('/form')}}">Form</a></li>
           </ul>
         </div>
       </li>
@@ -81,7 +81,7 @@
             <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('/register')}}"> Register </a></li>
           </ul>
         </div>
       </li>

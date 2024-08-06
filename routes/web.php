@@ -19,3 +19,4 @@ Route::get('/', function () {
 //dashboard Start
 Route::get('/mydashboard','dashboarController@mydashboard')->name('mydashboard');
 Route::get('/form','dashboarController@form');
+Route::get('/register','dashboarController@register');

@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="/mydashboard">
+        <a class="nav-link" href="{{url('/mydashboard')}}">
           <i class="mdi mdi-grid-large menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
@@ -29,7 +29,7 @@
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="/form">Form</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url('/form')}}">Form</a></li>
           </ul>
         </div>
       </li>
@@ -46,17 +46,45 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-          <i class="menu-icon mdi mdi-table"></i>
-          <span class="menu-title">Tables</span>
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-hero" aria-expanded="false" aria-controls="ui-hero">
+          <i class="menu-icon mdi mdi-floor-plan"></i>
+          <span class="menu-title">Hero</span>
           <i class="menu-arrow"></i>
         </a>
-        <div class="collapse" id="tables">
+        <div class="collapse" id="ui-hero">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('/herolist')}}">Hero List</a></li>
+            <li class="nav-item">  <a class="nav-link" href="{{url('/addhero')}}"> Add Hero</a></li>
           </ul>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-noyon" aria-expanded="false" aria-controls="ui-noyon">
+          <i class="menu-icon mdi mdi-floor-plan"></i>
+          <span class="menu-title">Expertise</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-noyon">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{url('/expertiselist')}}">ExpertiseList</a></li>
+            <li class="nav-item">  <a class="nav-link" href="{{url('/addexpertise')}}"> Add Expertise</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-education" aria-expanded="false" aria-controls="ui-education">
+          <i class="menu-icon mdi mdi-floor-plan"></i>
+          <span class="menu-title">Education</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-education">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{url('/educationlist')}}">Education List</a></li>
+            <li class="nav-item">  <a class="nav-link" href="{{url('/addeducation')}}"> Add Education</a></li>
+          </ul>
+        </div>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
           <i class="menu-icon mdi mdi-layers-outline"></i>
@@ -81,7 +109,7 @@
             <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('/register')}}"> Register </a></li>
           </ul>
         </div>
       </li>

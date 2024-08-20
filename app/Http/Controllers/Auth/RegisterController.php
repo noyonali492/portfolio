@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
@@ -50,6 +50,8 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'cell' => 'required|min:8|max:11|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'image'=>'required|mimes:jpg,jpeg,png,bmp',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -59,14 +61,30 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function create(array $data)
     {
+        $imag =  $request['image'];
+        //dd($request->file['image']);
+       
+       
+        
+       // $imag->move($destinationPath, $path);
+       // dd($request['image']);
+       //$productPic = $request->file(['image']);
+        $name = $imag->getClientOriginalName();
+        $uploadPah = 'userPic/';
+        $imag->move($uploadPah,$name);
+        $imageUrl = $uploadPah.$name;
+       // dd($imageUrl);
+
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name' => $request['name'],
+            'cell' => $request['cell'],
+            'image' => $imageUrl,
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
         ]);
     }
 }

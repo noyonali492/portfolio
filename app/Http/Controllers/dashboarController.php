@@ -13,4 +13,7 @@ class dashboarController extends Controller
     public function form(){
         return view('dashboard.pages.form');
     }
+    public function register(){
+        return view('dashboard.pages.register');
+    }
 }

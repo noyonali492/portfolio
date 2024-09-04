@@ -6,6 +6,7 @@ use App\Http\Controllers\dashboarController;
 use App\Http\Controllers\ExpertiseController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\PricingController; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,6 +45,11 @@ Route::post('/saveeducation', [EducationController::class, 'saveeducation']);
 Route::get('/editeducation/{id}', [EducationController::class, 'editeducation']);
 Route::post('/updateeducation', [EducationController::class, 'updateeducation']);
 
+
+
+Route::get('/pricinglist', [PricingController::class, 'index']);
+Route::get('/addpricing', [PricingController::class, 'addpricing']);
+Route::post('/savepricing', [PricingController::class, 'savepricing'])->name('savepricing');
 //auth 
 Auth::routes();
 

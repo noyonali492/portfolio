@@ -153,7 +153,7 @@
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
               <img class="img-md rounded-circle" src="{{asset('dashboard/assets/images/faces/face8.jpg')}}" alt="Profile image">
-              <p class="mb-1 mt-3 fw-semibold">{{ Auth::user()->name}}</p>
+              {{-- <p class="mb-1 mt-3 fw-semibold">{{ Auth::user()->name}}</p> --}}
               <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
             </div>
             <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>

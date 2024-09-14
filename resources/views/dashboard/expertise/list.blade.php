@@ -39,7 +39,7 @@
                       </td>
                       <td> {{ $singlevalue->designation }} </td>
                       <td> {{ $singlevalue->discription }} </td>
-                      <td> <a href="">Edit</a> || <a href=""> Delete </a> </td>
+                      <td> <a href="{{url('/editexpertise/'.$singlevalue->id)}}">Edit</a> || <a href="{{url('/deleteexpertise/'.$singlevalue->id)}}"> Delete </a> </td>
                     </tr>
                         
                     @endforeach

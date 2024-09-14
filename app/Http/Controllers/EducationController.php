@@ -20,8 +20,8 @@ class EducationController extends Controller
         DB::table('resume_education')->insert(
             [
                 'skill_year' => $skill_year,
-                'discription' => $designation,
-                'designation' => $discription
+                'discription' => $discription,
+                'designation' => $designation
             ]
         );
         return redirect('/educationlist')->with('msg','Education Add successfully');
@@ -34,6 +34,17 @@ class EducationController extends Controller
     }
 
     public function updateeducation(Request $request){-
-        dd($request);
+        //dd($request->skill_year);
+       
+        
+        DB::table('resume_education')->where('id',$request->id)->update(
+            [
+                'skill_year' => $request->skill_year,
+                'discription' => $request->designation,
+                'designation' => $request->discription
+
+            ]
+        );
+        return redirect('/educationlist')->with('msg','Expertise Update successfully');
     }
 }

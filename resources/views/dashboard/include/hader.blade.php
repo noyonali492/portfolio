@@ -17,7 +17,7 @@
     <div class="navbar-menu-wrapper d-flex align-items-top">
       <ul class="navbar-nav">
         <li class="nav-item fw-semibold d-none d-lg-block ms-0">
-          <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h1>
+          <h1 class="welcome-text">Welcome To, <span class="text-black fw-bold">{{ Auth::user()->name}}</span></h1>
           <h3 class="welcome-sub-text">Your performance summary this week </h3>
         </li>
       </ul>
@@ -149,17 +149,27 @@
         </li>
         <li class="nav-item dropdown d-none d-lg-block user-dropdown">
           <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="img-xs rounded-circle" src="{{asset('dashboard/assets/images/faces/face8.jpg')}}" alt="Profile image"> </a>
+            <img class="img-xs rounded-circle" src="{{Auth::user()->image}}" alt="Profile image"> </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-              <img class="img-md rounded-circle" src="{{asset('dashboard/assets/images/faces/face8.jpg')}}" alt="Profile image">
-              {{-- <p class="mb-1 mt-3 fw-semibold">{{ Auth::user()->name}}</p> --}}
-              <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+              {{-- <img class="img-md rounded-circle" src="{{Auth::user()->image}}" alt="Profile image"> --}}
+              <p class="mb-1 mt-3 fw-semibold">{{ Auth::user()->name}}</p>
+              <p class="fw-light text-muted mb-0">{{ Auth::user()->email}}</p>
+             
             </div>
             <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
             <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
             <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
             <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
             <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
           </div>
         </li>

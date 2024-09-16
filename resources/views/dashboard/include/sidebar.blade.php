@@ -46,19 +46,6 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#ui-pricing" aria-expanded="false" aria-controls="ui-pricing">
-          <i class="menu-icon mdi mdi-floor-plan"></i>
-          <span class="menu-title">Pricing</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="ui-pricing">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{url('/pricinglist')}}">pricing List</a></li>
-            <li class="nav-item">  <a class="nav-link" href="{{url('/addpricing')}}"> Add pricing</a></li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#ui-hero" aria-expanded="false" aria-controls="ui-hero">
           <i class="menu-icon mdi mdi-floor-plan"></i>
           <span class="menu-title">Hero</span>
@@ -71,6 +58,35 @@
           </ul>
         </div>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-Package" aria-expanded="false" aria-controls="ui-Package">
+          <i class="menu-icon mdi mdi-floor-plan"></i>
+          <span class="menu-title">Package</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-Package">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{url('/package')}}">Package List</a></li>
+            <li class="nav-item">  <a class="nav-link" href="{{url('/package/create')}}"> Add Package</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#service" aria-expanded="false" aria-controls="service">
+          <i class="menu-icon mdi mdi-floor-plan"></i>
+          <span class="menu-title">Service</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="service">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{url('/service')}}">Service List</a></li>
+            <li class="nav-item">  <a class="nav-link" href="{{url('/service/create')}}"> Add Service</a></li>
+          </ul>
+        </div>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#ui-noyon" aria-expanded="false" aria-controls="ui-noyon">
           <i class="menu-icon mdi mdi-floor-plan"></i>

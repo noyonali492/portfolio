@@ -63,12 +63,14 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    protected function create(array $request)
     {
+
+       
         $imag =  $request['image'];
         //dd($request->file['image']);
        
-       
+        $celll = $request['cell'];
         
        // $imag->move($destinationPath, $path);
        // dd($request['image']);
@@ -77,11 +79,11 @@ class RegisterController extends Controller
         $uploadPah = 'userPic/';
         $imag->move($uploadPah,$name);
         $imageUrl = $uploadPah.$name;
-       // dd($imageUrl);
+      // dd($celll);
 
         return User::create([
             'name' => $request['name'],
-            'cell' => $request['cell'],
+            'cell' => $celll,
             'image' => $imageUrl,
             'email' => $request['email'],
             'password' => Hash::make($request['password']),

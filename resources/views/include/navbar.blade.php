@@ -24,6 +24,9 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a href="{{url('/mydashboard')}}" class="nav-link">mydashboard</a>
+                </li>
+                <li class="nav-item">
                     <a href="#portfolio" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item">

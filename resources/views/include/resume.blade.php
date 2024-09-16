@@ -12,19 +12,16 @@
                             <span class="line"></span>  
                         </div>
                     </div>
+                    @foreach ($resume_expertise as $resume_expertis)
+                        
+                   
                     <div class="card-body">
-                        <h6 class="title text-danger">2017 - Present</h6>
-                        <P>UX Developer</P>
-                        <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
+                        <h6 class="title text-danger">{{$resume_expertis->skill_year}}</h6>
+                        <P>{{$resume_expertis->designation}}</P>
+                        <P class="subtitle">{{$resume_expertis->discription}}</P>
                         <hr>
-                        <h6 class="title text-danger">2016 - 2017</h6>
-                        <P>Front-end Developer</P>
-                        <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-                        <hr>
-                        <h6 class="title text-danger">2015 - 2016</h6>
-                        <P>UX Designer</P>
-                        <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
                     </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -35,20 +32,16 @@
                             <span class="line"></span>  
                         </div>
                     </div>
+
+
+                    @foreach ($educationlists as $educationlist)
                     <div class="card-body">
-                        <h6 class="title text-danger">2017 - Present</h6>
-                        <P>B.E Computer Engineering</P>
-                        <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae obcaecati odit repellat ducimus cum, minus tempora aperiam at.</P>
+                        <h6 class="title text-danger">{{$educationlist->skill_year}}</h6>
+                        <P>{{$educationlist->discription}}</P>
+                        <P class="subtitle">{{$educationlist->designation}}</P>
                         <hr>
-                        <h6 class="title text-danger">2016 - 2017</h6>
-                        <P>Diploma in Computer Engineering</P>
-                        <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, id officiis quas placeat quia voluptas dolorum rem animi nostrum quae.aliquid repudiandae saepe!.</P>
-                        <hr>
-                        <h6 class="title text-danger">2015 - 2016</h6>
-                        <P>High School Degree</P>
-                        <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-                        
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-lg-4">
